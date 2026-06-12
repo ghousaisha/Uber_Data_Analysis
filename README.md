@@ -2,154 +2,151 @@
 
 ## Project Overview
 
-This project is an interactive Power BI dashboard created to analyze Uber ride booking data. The dashboard provides insights into booking trends, cancellation analysis, revenue generation, vehicle performance, customer ratings, and operational KPIs.
-
-The purpose of this project is to transform raw ride-booking data into meaningful business insights using data visualization and DAX measures in Power BI.
+Developed an interactive Power BI dashboard to analyze Uber booking operations, revenue performance, vehicle utilization, cancellation patterns, customer behavior, and service quality metrics. The dashboard transforms raw booking data into actionable business insights to support operational efficiency and data-driven decision-making.
 
 ---
 
-# Dashboard Features
-
-## 1. Overall Analysis
-
-* Total Bookings
-* Successful Bookings
-* Cancelled Bookings
-* Booking Trends
-* Ride Distribution
-
-## 2. Cancellation Analysis
-
-* Customer Cancellation Reasons
-* Driver Cancellation Reasons
-* Cancellation Percentage
-* Cancellation Comparison
-
-## 3. Vehicle Type Analysis
-
-* Vehicle-wise Revenue
-* Vehicle-wise Booking Count
-* Popular Vehicle Types
-
-## 4. Revenue Analysis
-
-* Total Revenue
-* Revenue by Vehicle Type
-* Revenue Trends Over Time
-
-## 5. Ratings Analysis
-
-* Customer Ratings
-* Driver Ratings
-* Ride Experience Insights
-
----
-
-# Tools & Technologies Used
+## Tools & Technologies
 
 * Power BI
 * DAX (Data Analysis Expressions)
-* Data Modeling
-* Data Cleaning
-* Interactive Visualizations
+* Power Query
+* Data Cleaning & Transformation
+* Business Intelligence & Data Visualization
 
 ---
 
-# Key KPIs Used
+## Key KPIs
 
-* Total Bookings
-* Successful Bookings
-* Cancelled Bookings
-* Cancellation Rate
-* Revenue
-* Average Ratings
-* CTAT
-* VTAT
+* Total Bookings: 84.79K
+* Successful Bookings: 52.90K
+* Cancelled Bookings: 21.32K
+* Cancellation Rate: 25%
+* Revenue Analysis
+* Customer Ratings
+* Driver Ratings
+* Vehicle Performance Metrics
 
----
-
-# Dataset Information
-
-The dataset contains:
-
-* Booking ID
-* Booking Status
-* Customer ID
-* Vehicle Type
-* Pickup & Drop Locations
-* Ride Date
-* Revenue
-* Ratings
-* Cancellation Reasons
 
 ---
 
-# Important DAX Measures
+## Business Problems Solved
 
-## Cancelled Bookings
+### 1. High Booking Cancellation Rate
 
-```DAX
-CanceledBookings =
-CALCULATE(
-    COUNTROWS(ncr_ride_bookings),
-    ncr_ride_bookings[Booking Status] IN {
-        "Cancelled by Driver",
-        "Cancelled by Customer"
-    }
-)
-```
+**Problem:**
+Approximately 25% of bookings were cancelled, resulting in revenue loss and reduced customer satisfaction.
 
-## Total Bookings
+**Analysis Performed:**
 
-```DAX
-TotalBookings =
-COUNTROWS(ncr_ride_bookings)
-```
+* Analyzed customer cancellation reasons.
+* Analyzed driver cancellation reasons.
+* Compared successful vs cancelled bookings.
 
-## Cancellation Percentage
+**Recommendation:**
 
-```DAX
-CanceledPercentage =
-DIVIDE(
-    [CanceledBookings],
-    [TotalBookings],
-    0
-)
-```
+* Improve driver availability.
+* Reduce driver response delays.
+* Implement stricter cancellation policies.
+* Improve ride matching algorithms.
 
 ---
 
-# Objectives of the Project
+### 2. Revenue Optimization
 
-* Analyze ride booking patterns
-* Identify cancellation trends
-* Monitor operational performance
-* Improve business decision-making
-* Build an interactive BI solution
+**Problem:**
+Identify the payment methods and vehicle categories generating maximum revenue.
 
----
+**Key Insight:**
 
-# Insights Generated
+* UPI generated the highest booking revenue.
+* Auto, Bike, and Go Mini contributed significantly to total revenue.
 
-* Percentage of cancelled rides
-* Major cancellation reasons
-* Most used vehicle category
-* Revenue contribution by vehicle type
-* Customer booking behavior trends
+**Recommendation:**
+
+* Promote digital payment incentives.
+* Increase availability of high-performing vehicle categories.
+* Optimize pricing strategies for low-performing segments.
 
 ---
 
-# Future Improvements
+### 3. Vehicle Utilization Analysis
 
-* Real-time data integration
-* Predictive analytics
-* AI-based ride demand forecasting
-* Advanced customer segmentation
+**Problem:**
+Determine which vehicle types contribute most to business performance.
+
+**Key Insight:**
+
+* Auto and Bike categories showed the highest utilization.
+* UberXL generated comparatively lower booking value.
+
+**Recommendation:**
+
+* Expand supply for high-demand vehicle categories.
+* Review pricing and demand strategy for UberXL.
 
 ---
 
-# Developed By
+### 4. Customer Experience Monitoring
 
-Aisha Ghous
+**Problem:**
+Evaluate service quality across vehicle categories.
 
-Data Analytics & Power BI Project
+**Key Insight:**
+
+* Customer ratings remained consistently around 4.4/5.
+* Driver ratings averaged around 4.23/5.
+
+**Recommendation:**
+
+* Maintain service quality standards.
+* Introduce driver training and incentive programs to improve ratings further.
+
+---
+
+## Key Insights
+
+* 66% of bookings were successfully completed.
+* 25% of bookings were cancelled.
+* UPI was the most preferred payment method.
+* Auto and Bike were the highest-performing vehicle categories.
+* Customer ratings remained consistently above 4.4.
+* Driver ratings remained above 4.2.
+* Vehicle demand varied significantly across categories.
+
+---
+
+## Business Impact
+
+This dashboard enables stakeholders to:
+
+* Monitor booking performance in real time.
+* Identify operational bottlenecks causing cancellations.
+* Optimize vehicle allocation strategies.
+* Improve customer satisfaction.
+* Increase revenue through data-driven decisions.
+* Track key performance indicators efficiently.
+
+---
+
+## Conclusion
+
+The analysis revealed that booking cancellations represent a significant operational challenge, accounting for nearly one-fourth of total bookings. Revenue was primarily driven by UPI payments and high-demand vehicle categories such as Auto and Bike. While customer satisfaction remains strong, reducing cancellations and improving driver efficiency can significantly enhance overall business performance. The dashboard provides actionable insights that support strategic planning, operational improvements, and revenue optimization.
+
+---
+
+## Future Enhancements
+
+* Real-Time Data Integration
+* Predictive Analytics for Ride Demand Forecasting
+* Customer Segmentation Analysis
+* Driver Performance Analytics
+* Machine Learning-Based Cancellation Prediction
+
+---
+
+### Developed By
+
+**Aisha Ghous**
+Data Analytics | Power BI | Business Intelligence
+
